@@ -1,0 +1,10 @@
+#!/bin/bash -e
+#
+# S2I run script for the 'tip-log-generator-base' image.
+# The run script executes the server that runs your application.
+#
+# For more information see the documentation:
+#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
+#
+
+java -jar build/libs/tip-log-generator-1.0-SNAPSHOT.jar
