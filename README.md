@@ -1,6 +1,9 @@
 created with s2i create <image_name> <folder_name>
 --loglevel=5
 
+(s2i) oc new-build https://github.com/camabeh/tip-log-generator-base --name s2i-tip-log
+oc new-app s2i-tip-log:latest~https://github.com/camabeh/tip-log-generator
+
 # Creating a basic S2I builder image  
 
 ## Getting started  
