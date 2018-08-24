@@ -25,6 +25,8 @@ COPY ./s2i/bin/ /usr/libexec/s2i
 # TODO: Drop the root user and make the content of /opt/app-root owned by user 1001
 # RUN chown -R 1001:1001 /opt/app-root
 
+RUN mkdir /data && chown 1001:1001 /data
+
 # This default user is created in the openshift/base-centos7 image
 USER 1001
 
